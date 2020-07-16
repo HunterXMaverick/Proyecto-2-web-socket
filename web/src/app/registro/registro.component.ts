@@ -15,15 +15,15 @@ export class RegistroComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  registrar(): boolean {
-    this.auntenticar.logIn(this.datos)
-    .subscribe(res => {
-      alert('Se a registrado exitosamente')
-      this.router.navigate(['/login'])
-    },
-    err => {
-      console.log(err)
-    })
-    return false 
-  }
+  // registrar(): boolean {
+  //   this.auntenticar.logIn(this.datos)
+  //   .subscribe(res => {
+  //     alert('Se a registrado exitosamente')
+  //     this.router.navigate(['/login'])
+  //   },
+  //   err => {
+  //     console.log(err)
+  //   })
+  //   return false 
+  // }
 }

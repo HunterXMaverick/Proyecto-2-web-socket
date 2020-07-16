@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginAuntenticacionService } from "../servicios/login.service";
+import { LoginService } from "../servicios/login.service";
 import { Router } from "@angular/router";
 @Component({
   selector: 'app-login',
@@ -9,18 +9,18 @@ import { Router } from "@angular/router";
 export class LoginComponent implements OnInit {
 
   datos = {email: '', contrasena: ''}
-  constructor(private auntenticar: LoginAuntenticacionService, private router: Router) { }
+  constructor(private auntenticar: LoginService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  getUsuarios(): boolean {
-    this.auntenticar.logeo(this.datos)
-    .subscribe(res => {
-      this.router.navigate(['/'])
-      localStorage.setItem('token', res.token)
-    })
-    return false 
-  }
+  // getUsuarios(): boolean {
+  //   this.auntenticar.logeo(this.datos)
+  //   .subscribe(res => {
+  //     this.router.navigate(['/'])
+  //     localStorage.setItem('token', res.token)
+  //   })
+  //   return false 
+  // }
 
 }

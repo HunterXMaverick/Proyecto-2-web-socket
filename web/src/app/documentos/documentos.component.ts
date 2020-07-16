@@ -24,7 +24,13 @@ export class DocumentosComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this._docSub = this.documentosService.documentoActual.pipe(
-      startWith({id: '', doc: 'Seleccione un documento o cree un nuevo'})
+      startWith(
+        {id: '', 
+        doc: 'Seleccione un documento o cree un nuevo',
+        nombreUsuario: '',
+        nombreSala: '',
+        passwSala: ''
+      })
     ).subscribe(documento => this.documento = documento);
   }
 
@@ -33,7 +39,17 @@ export class DocumentosComponent implements OnInit, OnDestroy {
   }
 
   editarDcoumento(){
+    this.getUsuario();
     this.documentosService.editDocumento(this.documento);
+  }
+
+  private getUsuario(){
+    let decode = jwt_decode(sessionStorage.getItem('token'));
+    this.documento.doc = decode.data.nombreUsuario
+  }
+
+  documentosLista() {
+    this.router.navigate(['/documento/documento-lista']);
   }
 
 }
