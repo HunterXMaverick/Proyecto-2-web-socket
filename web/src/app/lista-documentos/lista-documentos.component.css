@@ -1,0 +1,47 @@
+/* .sidenav{
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.span {
+    padding: 6px, 8px, 6px, 16px;
+    text-decoration: none;
+    color: #999999;
+    display: block;
+    font-size: 14pt;
+}.selected {
+    color: red;
+}:hover{
+    color: white;
+    cursor: pointer;
+} */
+
+
+.sidenav {
+    position: fixed;
+    height: 100%;
+    width: 200%;
+    top: 0;
+    left: 0;
+    background-color: #1cb335;
+    overflow: hidden;
+    padding-top: 20px;
+}
+.span {
+    padding: 6px, 8px, 6px, 16px;
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    font-size: 14pt;
+    }.selected {
+        color: #ee6611;
+    }.hover {
+       color: #f1f1f1;
+       cursor: pointer; 
+    }
